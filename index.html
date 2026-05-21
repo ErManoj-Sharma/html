@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dheeraj Prajapati — Creative Developer & Digital Strategist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="video" href="hero_video.mp4" type="video/mp4">
+<link rel="preload" as="video" href="hero_video_mobile.mp4" type="video/mp4">
+<link rel="preload" as="image" href="hero_poster.jpg">
+<link rel="preload" as="image" href="hero_poster_mobile.jpg">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="l-logo">IN Process</div>
+  <div class="l-bar"><div class="l-fill"></div></div>
+  <div class="l-status">INITIALIZING</div>
+</div>
+
+<!-- CANVAS -->
+<canvas id="cvs"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="n-logo">DP</div>
+  <ul class="n-links">
+    <li><a href="#about" class="n-link" data-text="About">About</a></li>
+    <li><a href="#exp" class="n-link" data-text="Experience">Experience</a></li>
+    <li><a href="#skills" class="n-link" data-text="Skills">Skills</a></li>
+    <li><a href="#work" class="n-link" data-text="My Work">My Work</a></li>
+    <li><a href="#edu" class="n-link" data-text="Education">Education</a></li>
+    <li><a href="#contact" class="n-link" data-text="Contact">Contact</a></li>
+  </ul>
+  <button class="n-ham" id="navHam" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" id="mobClose">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <ul class="mob-links">
+    <li><a href="#about" class="mob-link" data-text="About">About</a></li>
+    <li><a href="#exp" class="mob-link" data-text="Experience">Experience</a></li>
+    <li><a href="#skills" class="mob-link" data-text="Skills">Skills</a></li>
+    <li><a href="#work" class="mob-link" data-text="My Work">My Work</a></li>
+    <li><a href="#edu" class="mob-link" data-text="Education">Education</a></li>
+    <li><a href="#contact" class="mob-link" data-text="Contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="v-wrap">
+    <video id="heroVideo" class="hero-video-desktop" autoplay muted loop playsinline preload="auto" poster="hero_poster.jpg">
+      <source src="hero_video.mp4" type="video/mp4">
+    </video>
+    <video id="heroVideoMobile" class="hero-video-mobile" autoplay muted loop playsinline preload="auto" poster="hero_poster_mobile.jpg">
+      <source src="hero_video_mobile.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="v-ov"></div>
+  <div class="h-cont">
+    <h1 class="h-name"><span>Dheeraj Prajapati</span></h1>
+    <div class="h-roles-wrap">
+      <div class="h-role">
+        <span class="role-text" id="roleText"></span>
+        <span class="role-cursor"></span>
+      </div>
+    </div>
+    <p class="h-tagline">Bridging creativity & technology to build the future</p>
+  </div>
+  <div class="h-scroll">
+    <span>SCROLL</span>
+    <div class="sl"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sh reveal">
+    <span class="sl scramble-text" data-text="// ABOUT ME">// ABOUT ME</span>
+    <h2 class="st scramble-text" data-text="The Creative Mind">The <span>Creative</span> Mind</h2>
+    <p class="ss">Bridging technology and creativity to build impactful digital experiences</p>
+  </div>
+  <div class="ag">
+    <div class="aiw">
+      <div class="aig"></div>
+      <img src="hero_poster.jpg" alt="Dheeraj Prajapati" class="ai">
+    </div>
+    <div class="atw">
+      <p class="at">Dheeraj Prajapati is a creative technology professional with experience in frontend development, QA engineering, AI-powered marketing, digital branding, automation testing, and cinematic content creation. He combines technology, creativity, and modern AI workflows to build impactful digital experiences.</p>
+      <div class="sg">
+        <div class="sc"><div class="sn" data-c="3">0</div><div class="slb">Years Experience</div></div>
+        <div class="sc"><div class="sn" data-c="50">0</div><div class="slb">Creative Projects</div></div>
+        <div class="sc"><div class="sn" style="font-size:1.5rem">Frontend + AI</div><div class="slb">Specialist</div></div>
+        <div class="sc"><div class="sn" style="font-size:1.5rem">QA & Auto</div><div class="slb">Experience</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="exp">
+  <div class="sh reveal">
+    <span class="sl scramble-text" data-text="// EXPERIENCE">// EXPERIENCE</span>
+    <h2 class="st scramble-text" data-text="Career Journey">Career <span>Journey</span></h2>
+    <p class="ss">A timeline of professional growth and creative exploration</p>
+  </div>
+  <div class="tl">
+    <div class="tli">
+      <div class="tld"></div>
+      <div class="tlc">
+        <div class="tlh">
+          <div><div class="tlr">Freelance IT Support & Digital Strategist</div><div class="tlc2">Self-Employed</div></div>
+          <span class="tldt">Jan 2025 - Present</span>
+        </div>
+        <ul class="tlt">
+          <li>Website Development</li><li>Hosting Management</li><li>Brand Identity Design</li><li>Social Media Marketing</li>
+          <li>Facebook/Instagram/YouTube/Google Ads</li><li>AI-Powered Marketing</li><li>Video Editing</li><li>Content Creation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tli">
+      <div class="tld"></div>
+      <div class="tlc">
+        <div class="tlh">
+          <div><div class="tlr">Quality Assurance Engineer</div><div class="tlc2">Hashmatic</div></div>
+          <span class="tldt">Feb 2023 - Dec 2024</span>
+        </div>
+        <ul class="tlt">
+          <li>Manual Testing</li><li>Selenium Automation</li><li>Java + Selenium Framework</li><li>Functional Testing</li>
+          <li>Regression Testing</li><li>Smoke Testing</li><li>AI Testing Tools (Testim)</li><li>Frontend Development</li>
+          <li>HTML/CSS/JavaScript</li><li>Hostinger Deployment</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tli">
+      <div class="tld"></div>
+      <div class="tlc">
+        <div class="tlh">
+          <div><div class="tlr">Product Engineer Trainee</div><div class="tlc2">Tekizma</div></div>
+          <span class="tldt">May 2022 - Dec 2022</span>
+        </div>
+        <ul class="tlt">
+          <li>Python & Machine Learning</li><li>Pandas Data Analysis</li><li>Manual Testing</li><li>Automation Testing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tli">
+      <div class="tld"></div>
+      <div class="tlc">
+        <div class="tlh">
+          <div><div class="tlr">Development Intern</div><div class="tlc2">Arahan Technology</div></div>
+          <span class="tldt">Aug 2021 - Nov 2021</span>
+        </div>
+        <ul class="tlt">
+          <li>AWS Cloud Computing</li><li>EC2, S3, Athena</li><li>Docker</li><li>Virtual Machine Management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sh reveal">
+    <span class="sl scramble-text" data-text="// SKILLS">// SKILLS</span>
+    <h2 class="st scramble-text" data-text="Technical Expertise">Technical <span>Expertise</span></h2>
+    <p class="ss">A diverse toolkit spanning development, testing, cloud, and creative domains</p>
+  </div>
+  <div class="skg">
+    <div class="sk">
+      <div class="ski">
+        <div class="skt">
+          <span class="ski2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+          Programming
+        </div>
+        <div class="sktg"><span class="skt2">Python</span><span class="skt2">C</span><span class="skt2">JavaScript</span></div>
+      </div>
+    </div>
+    <div class="sk">
+      <div class="ski">
+        <div class="skt">
+          <span class="ski2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+          Frontend
+        </div>
+        <div class="sktg"><span class="skt2">HTML</span><span class="skt2">CSS</span><span class="skt2">JavaScript</span><span class="skt2">Responsive Design</span></div>
+      </div>
+    </div>
+    <div class="sk">
+      <div class="ski">
+        <div class="skt">
+          <span class="ski2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          Testing
+        </div>
+        <div class="sktg"><span class="skt2">Selenium</span><span class="skt2">Manual Testing</span><span class="skt2">Automation Testing</span><span class="skt2">SDLC/STLC</span><span class="skt2">Functional Testing</span><span class="skt2">Regression Testing</span></div>
+      </div>
+    </div>
+    <div class="sk">
+      <div class="ski">
+        <div class="skt">
+          <span class="ski2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></span>
+          Cloud & Tools
+        </div>
+        <div class="sktg"><span class="skt2">AWS</span><span class="skt2">Docker</span><span class="skt2">Linux</span><span class="skt2">Windows</span></div>
+      </div>
+    </div>
+    <div class="sk">
+      <div class="ski">
+        <div class="skt">
+          <span class="ski2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span>
+          Creative Tools
+        </div>
+        <div class="sktg"><span class="skt2">Photoshop</span><span class="skt2">Illustrator</span><span class="skt2">Premiere Pro</span><span class="skt2">Filmora</span></div>
+      </div>
+    </div>
+    <div class="sk">
+      <div class="ski">
+        <div class="skt">
+          <span class="ski2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 12L2.5 7.5"/></svg></span>
+          Marketing & AI
+        </div>
+        <div class="sktg"><span class="skt2">AI Tools</span><span class="skt2">Social Media Marketing</span><span class="skt2">Google Ads</span><span class="skt2">Brand Strategy</span><span class="skt2">Content Creation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEE MY WORK -->
+<section id="work">
+  <div class="ww">
+    <div class="sh reveal">
+      <span class="sl scramble-text" data-text="// SHOWCASE">// SHOWCASE</span>
+      <h2 class="st scramble-text" data-text="See My Work">See My <span>Work</span></h2>
+      <p class="ss">Cinematic video showcase across multiple creative categories</p>
+    </div>
+    <div class="wc">
+      <button class="wcb on" data-c="all">All Work</button>
+      <button class="wcb" data-c="gym">Gym Ads</button>
+      <button class="wcb" data-c="product">Product Animation</button>
+      <button class="wcb" data-c="reels">Social Reels</button>
+      <button class="wcb" data-c="motion">Motion Graphics</button>
+      <button class="wcb" data-c="brand">Brand Commercials</button>
+      <button class="wcb" data-c="3d">3D Animation</button>
+      <button class="wcb" data-c="ui">UI Showcase</button>
+    </div>
+    <div class="wg" id="wg">
+      <div class="wca" data-c="gym" data-video="hero_video.mp4">
+        <div class="wca-inner">
+          <video class="wca-video" muted loop playsinline poster="hero_poster.jpg">
+            <source src="hero_video.mp4" type="video/mp4">
+          </video>
+          <img src="hero_poster.jpg" alt="Gym Ad" class="wca-poster">
+          <div class="wca-overlay">
+            <div class="wca-play-btn">
+              <svg class="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            </div>
+            <div class="wca-progress"><div class="wca-progress-bar"></div></div>
+            <div class="wca-time">00:00 / 00:00</div>
+          </div>
+        </div>
+        <div class="wo">
+          <h3 class="wt">Power Fitness Ad</h3>
+          <p class="wd">High-energy gym commercial with cinematic transitions</p>
+          <div class="wca-tags"><span class="wca-tag">Video</span><span class="wca-tag">Cinematic</span></div>
+        </div>
+      </div>
+      <div class="wca" data-c="product" data-video="hero_video.mp4">
+        <div class="wca-inner">
+          <video class="wca-video" muted loop playsinline poster="hero_poster.jpg">
+            <source src="hero_video.mp4" type="video/mp4">
+          </video>
+          <img src="hero_poster.jpg" alt="Product" class="wca-poster">
+          <div class="wca-overlay">
+            <div class="wca-play-btn">
+              <svg class="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            </div>
+            <div class="wca-progress"><div class="wca-progress-bar"></div></div>
+            <div class="wca-time">00:00 / 00:00</div>
+          </div>
+        </div>
+        <div class="wo">
+          <h3 class="wt">Product Showcase</h3>
+          <p class="wd">3D product animation with premium lighting</p>
+          <div class="wca-tags"><span class="wca-tag">3D</span><span class="wca-tag">Product</span></div>
+        </div>
+      </div>
+      <div class="wca" data-c="reels" data-video="hero_video.mp4">
+        <div class="wca-inner">
+          <video class="wca-video" muted loop playsinline poster="hero_poster.jpg">
+            <source src="hero_video.mp4" type="video/mp4">
+          </video>
+          <img src="hero_poster.jpg" alt="Reels" class="wca-poster">
+          <div class="wca-overlay">
+            <div class="wca-play-btn">
+              <svg class="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            </div>
+            <div class="wca-progress"><div class="wca-progress-bar"></div></div>
+            <div class="wca-time">00:00 / 00:00</div>
+          </div>
+        </div>
+        <div class="wo">
+          <h3 class="wt">Viral Social Reel</h3>
+          <p class="wd">Trending social media content with motion graphics</p>
+          <div class="wca-tags"><span class="wca-tag">Social</span><span class="wca-tag">Trending</span></div>
+        </div>
+      </div>
+      <div class="wca" data-c="motion" data-video="hero_video.mp4">
+        <div class="wca-inner">
+          <video class="wca-video" muted loop playsinline poster="hero_poster.jpg">
+            <source src="hero_video.mp4" type="video/mp4">
+          </video>
+          <img src="hero_poster.jpg" alt="Motion" class="wca-poster">
+          <div class="wca-overlay">
+            <div class="wca-play-btn">
+              <svg class="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            </div>
+            <div class="wca-progress"><div class="wca-progress-bar"></div></div>
+            <div class="wca-time">00:00 / 00:00</div>
+          </div>
+        </div>
+        <div class="wo">
+          <h3 class="wt">Motion Reel</h3>
+          <p class="wd">Dynamic motion graphics with kinetic typography</p>
+          <div class="wca-tags"><span class="wca-tag">Motion</span><span class="wca-tag">Kinetic</span></div>
+        </div>
+      </div>
+      <div class="wca" data-c="brand" data-video="hero_video.mp4">
+        <div class="wca-inner">
+          <video class="wca-video" muted loop playsinline poster="hero_poster.jpg">
+            <source src="hero_video.mp4" type="video/mp4">
+          </video>
+          <img src="hero_poster.jpg" alt="Brand" class="wca-poster">
+          <div class="wca-overlay">
+            <div class="wca-play-btn">
+              <svg class="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            </div>
+            <div class="wca-progress"><div class="wca-progress-bar"></div></div>
+            <div class="wca-time">00:00 / 00:00</div>
+          </div>
+        </div>
+        <div class="wo">
+          <h3 class="wt">Brand Story</h3>
+          <p class="wd">Cinematic brand commercial with emotional storytelling</p>
+          <div class="wca-tags"><span class="wca-tag">Brand</span><span class="wca-tag">Story</span></div>
+        </div>
+      </div>
+      <div class="wca" data-c="3d" data-video="hero_video.mp4">
+        <div class="wca-inner">
+          <video class="wca-video" muted loop playsinline poster="hero_poster.jpg">
+            <source src="hero_video.mp4" type="video/mp4">
+          </video>
+          <img src="hero_poster.jpg" alt="3D" class="wca-poster">
+          <div class="wca-overlay">
+            <div class="wca-play-btn">
+              <svg class="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            </div>
+            <div class="wca-progress"><div class="wca-progress-bar"></div></div>
+            <div class="wca-time">00:00 / 00:00</div>
+          </div>
+        </div>
+        <div class="wo">
+          <h3 class="wt">3D Visual</h3>
+          <p class="wd">Stunning 3D animation with particle effects</p>
+          <div class="wca-tags"><span class="wca-tag">3D</span><span class="wca-tag">Particles</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div id="vm">
+  <div class="vmc">
+    <button class="vc">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <video id="mv" controls>
+      <source src="hero_video.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<section id="edu">
+  <div class="sh reveal">
+    <span class="sl scramble-text" data-text="// EDUCATION">// EDUCATION</span>
+    <h2 class="st scramble-text" data-text="Academic Background">Academic <span>Background</span></h2>
+    <p class="ss">Foundation built on strong technical education</p>
+  </div>
+  <div class="ec">
+    <div class="ei">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+    </div>
+    <h3 class="edg">Bachelor of Technology (B.Tech)</h3>
+    <p class="es">Information Technology</p>
+    <p class="edt">M.L.V Textile & Engineering College, Bhilwara Rajasthan (RTU)</p>
+    <p class="edt">2018 - 2022</p>
+    <span class="ecg">CGPA: 7.78 / 10</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sh reveal">
+    <span class="sl scramble-text" data-text="// CONTACT">// CONTACT</span>
+    <h2 class="st scramble-text" data-text="Let's Connect">Let's <span>Connect</span></h2>
+    <p class="ss">Ready to bring your vision to life? Let's create something extraordinary</p>
+  </div>
+  <div class="cg">
+    <div class="ci">
+      <h3>Get In Touch</h3>
+      <p>Have a project in mind or want to collaborate? I'm always open to discussing new opportunities and creative ideas.</p>
+      <div class="cit">
+        <div class="cic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><div class="cl">PHONE</div><div class="cv">+91-7737715782</div></div>
+      </div>
+      <div class="cit">
+        <div class="cic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><div class="cl">EMAIL</div><div class="cv">dheeraj@example.com</div></div>
+      </div>
+      <div class="socs">
+        <a href="#" class="soc" title="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" class="soc" title="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+        <a href="#" class="soc" title="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" class="soc" title="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+      </div>
+    </div>
+    <div class="cf">
+      <form id="cForm">
+        <div class="fg"><label>YOUR NAME</label><input type="text" placeholder="John Doe" required></div>
+        <div class="fg"><label>YOUR EMAIL</label><input type="email" placeholder="john@example.com" required></div>
+        <div class="fg"><label>SUBJECT</label><input type="text" placeholder="Project Inquiry" required></div>
+        <div class="fg"><label>MESSAGE</label><textarea placeholder="Tell me about your project..." required></textarea></div>
+        <button type="submit" class="fs">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="foot">
+  <p>&copy; 2025 <span>Dheeraj Prajapati</span>. Crafted with passion & precision.</p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- FLOATING SOCIAL SIDEBAR -->
+<div class="social-sidebar" id="socialSidebar">
+  <a href="#" title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+  <a href="#" title="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+  <a href="#" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+  <a href="#" title="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" title="Back to Top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>
